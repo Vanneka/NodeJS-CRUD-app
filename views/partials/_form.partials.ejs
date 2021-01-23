@@ -1,0 +1,13 @@
+<form method="POST" action="/posts">
+    <div class="form-group" id="title">
+        <label for="input-title">Post Title:</label>
+        <input name="postTitle" type="text" class="form-control" id="inputTitle" aria-describedby="inputHelp" placeholder="Enter title">
+        <small id="inputHelp" class="form-text text-muted">Please enter a title here.</small>
+      </div>
+
+      <div class="form-group" id="body">
+        <label for="input-body">Post body: </label>
+        <textarea name="postBody" class="form-control" id="inputBody" rows="3"></textarea>
+      </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>

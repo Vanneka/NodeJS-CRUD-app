@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NodeJS CRUD app</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+</head>
+<body>
+    
+<main class="container">
+    <h2>I am a CRUD app made with MEN + EJS</h2>
+    <div class="the-form">
+        <%- include('./partials/_form.partials.ejs')  %> 
+    </div>
+
+    <div class="the-contents mt-4 pt-3">
+       <% articles.forEach(article => { %>
+        <div class="content">
+            <h4 id="content-title">
+                <%- article %> 
+            </h4>
+
+            <div class="content-body">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi deserunt fugixzxt exercitationem, nam debitis pariatur illo earum perspiciatis ea corrupti rem sit nihil magni repellat modi praesentium, placeat, itaque aperiam?</p>
+                <div class="buttons my-4">
+                    <!-- <button class="btn btn-success" id="update">Read More</button> -->
+                    <!-- <button class="btn btn-warning" id="delete">Update</button> -->
+                    <!-- <button class="btn btn-danger" id="delete">Delete</button> -->
+                </div>
+
+                <hr>
+            </div>
+        </div>
+       <% }) %>
+
+    </div>
+        
+</main>
+</body>
+</html>
