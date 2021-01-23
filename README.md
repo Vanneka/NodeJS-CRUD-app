@@ -11,6 +11,6 @@ This is s asimple NodeJS application built using the followng tools
 - Bootstrap
 
 ### Initialization
-1 Clone the git repository using `git clone`.
-2 Install dependencies in the `package.json` file.
-2 start development environment using `npm run dev`.
+1. Clone the git repository using `git clone`.
+2. Install dependencies in the `package.json` file.
+3. start development environment using `npm run dev`.
