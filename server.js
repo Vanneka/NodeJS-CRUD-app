@@ -7,9 +7,9 @@ const postRoutes = require('./routes/route.posts')
 
 // CONNECT THE DATABASE
 let uri = 'mongodb://localhost/allBlogPosts'
-mongoose.connect(uri, {useNewUrlParser: true, useUnifiedTopology: true}).then(()=>{
+mongoose.connect(uri, { useNewUrlParser: true, useUnifiedTopology: true }).then(() => {
     console.log('Database connected')
-}).catch((err)=>{
+}).catch((err) => {
     console.log(`error, database did not connect because ${err}`)
 })
 
@@ -20,20 +20,20 @@ app.set('view engine', 'ejs')
 app.use(express.json())
 
 // READ FORM DATA
-app.use(express.urlencoded({extended:false}))
+app.use(express.urlencoded({ extended: false }))
 
 // USING THE ROUTES
 app.use('/posts', postRoutes);
 
 // SERVER CODE HERE
-app.get('/', (req, res)=>{
+app.get('/', (req, res) => {
     // render the index.ejs page
     res.send('<h2> This is the homepage </h2>')
 })
 // SERVER CODE HERE
 
 // LISTEN HERE
-app.listen(PORT, (err)=>{
-    if(err) throw new Error(err);
+app.listen(PORT, (err) => {
+    if (err) throw new Error(err);
     console.log(`App is listening on port ${PORT}`)
 })
