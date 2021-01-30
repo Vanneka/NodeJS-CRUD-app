@@ -11,7 +11,7 @@ router.get('/', async (req, res)=>{
     res.render('index', {allPosts: posts})
 })
 
-// get:id: get a particular item
+// get:id: get a particular post
 router.get('/:id', (req, res)=>{
     res.send(req.params.id)
 })
@@ -22,12 +22,14 @@ router.post('/', async (req, res)=>{
         postTitle:req.body.postTitle,
         postBody: req.body.postBody,
     })
-    // the database is here
-    const articleNos = [1, 2, 3, 4]
+    // the DB
+    const posts = await postSchema.find().sort({ postDate: -1 })
+    
     // DO THE VALIDATION HERE
     if(newPost.postTitle ==="" || newPost.postBody === ""){
         console.log('Please check the contents of your post')
-        res.render('index', {articles: articleNos})
+        res.render('index', {allPosts: posts})
+        return
     } else {
         try {
             newPost = await newPost.save();
