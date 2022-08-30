@@ -1,4 +1,4 @@
-## NODEJS CRUS APPLICATION
+## NODEJS CRUD APPLICATION
 This is s asimple NodeJS application built using the followng tools
 
 #### Backend
